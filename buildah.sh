@@ -3,6 +3,7 @@
 set -euo pipefail
 
 : "${CONTAINER_MOUNT:?CONTAINER_MOUNT must be set by the Buildah workflow}"
+# renovate: datasource=github-releases depName=Yelp/dumb-init extractVersion=^v?(?<version>.+)$
 DUMB_INIT_VERSION="1.2.5"
 buildah config --env "DUMB_INIT_VERSION=${DUMB_INIT_VERSION}" "${BASE_CONTAINER}"
 

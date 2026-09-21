@@ -44,6 +44,7 @@ jobs:
       image-tag: ${{ needs.init.outputs.image-push-tag }}
       image-repository: ${{ needs.init.outputs.image-push-repository }}
       base-image-repo: registry.access.redhat.com/ubi9/ubi-micro
+      # renovate: datasource=docker depName=registry.access.redhat.com/ubi9/ubi-micro versioning=redhat
       base-image-tag: "9.8-1784702951"
       install-packages: "bash coreutils-single basesystem"
       required-packages: "bash coreutils-single basesystem"
