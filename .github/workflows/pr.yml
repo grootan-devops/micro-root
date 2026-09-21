@@ -3,13 +3,6 @@ name: CI · Pull Request
 "on":
   pull_request:
     branches: [main]
-    paths:
-      - "*.sh"
-      - "*.md"
-      - VERSION
-      - ignored-cves.yml
-      - .gitignore
-      - .github/**
 
 run-name: "CI · ${{ github.event_name }} · ${{ github.sha }}"
 
