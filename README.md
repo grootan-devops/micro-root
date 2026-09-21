@@ -7,7 +7,7 @@ Dockerfile.
 ## Image
 
 - Registry: Docker Hub
-- Repository: `grootantec/micro-root`
+- Repository: `grootantech/micro-root`
 - Release: `1.0.0`
 - Base: `registry.access.redhat.com/ubi9/ubi-micro:9.8-1784702951`
 - Runtime: `bash`, `coreutils-single`, and `dumb-init 1.2.5`
