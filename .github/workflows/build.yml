@@ -74,7 +74,7 @@ jobs:
           -c 'cd /tmp/image-test && ./ci_image_test.sh'
 
   image-scan:
-    needs: [image, image-test, trivy-cache]
+    needs: [image, trivy-cache]
     uses: grootan-devops/github-ci-library/.github/workflows/scan.yml@dev
     secrets: inherit
     permissions:
