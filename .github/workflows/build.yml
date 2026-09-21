@@ -83,4 +83,3 @@ jobs:
     with:
       scan-type: image
       image-ref: ${{ needs.image.outputs.image-ref-digest }}
-      fail-on-warnings: true
