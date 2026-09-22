@@ -9,9 +9,9 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 ## [1.1.0] - 2026-09-22
 
-### Added
+### Changed
 
-- Initial toolkit Docker E2E project.
+- Pinned the GitHub Actions build, verification, and release workflows to `github-ci-library` 1.0.0.
 
 ## [1.0.0] - 2026-09-22
 
