@@ -7,6 +7,12 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-09-23
+
+### Changed
+
+- Prepare a coordinated 1.1.1 maintenance release; image contents and runtime configuration are unchanged.
+
 ## [1.1.0] - 2026-09-22
 
 ### Changed
