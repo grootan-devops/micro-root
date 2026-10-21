@@ -7,6 +7,13 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-21
+
+### Changed
+
+- Updated CI library to `1.6.0`
+- Moved image test to ci library
+
 ## [1.1.0] - 2026-09-22
 
 ### Changed
