@@ -64,29 +64,10 @@ jobs:
       required-packages: "bash coreutils-single basesystem"
       container-entrypoint: "/usr/bin/dumb-init --"
       container-cmd: "bash"
-
-  image-test:
-    needs: image
-    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-26.04' }}
-    timeout-minutes: 15
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v7
-      - name: Log in to Docker Hub
-        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v3
-        with:
-          registry: registry-1.docker.io
-          username: ${{ secrets.IMAGE_REGISTRY_USERNAME }}
-          password: ${{ secrets.IMAGE_REGISTRY_PASSWORD }}
-      - name: Run image smoke test as non-root
-        env:
-          IMAGE_REF: ${{ needs.image.outputs.image-ref-digest }}
-        run: >-
-          docker run --rm --privileged --user 10001:10001 --entrypoint /bin/bash
-          -v "${PWD}:/tmp/image-test:ro" "${IMAGE_REF}"
-          -c 'cd /tmp/image-test && ./ci_image_test.sh'
+      test: true
+      test-script: ci_image_test.sh
+      test-path: "."
+      test-shell: bash
 
   image-scan:
     needs: [image, trivy-cache]
