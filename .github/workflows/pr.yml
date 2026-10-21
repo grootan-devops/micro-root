@@ -49,7 +49,7 @@ jobs:
 
   image:
     needs: init
-    uses: grootan-devops/github-ci-library/.github/workflows/buildah.yml@1.5.0
+    uses: grootan-devops/github-ci-library/.github/workflows/buildah.yml@1.6.0-dev
     secrets: inherit
     permissions:
       contents: read
