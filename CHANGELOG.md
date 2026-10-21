@@ -11,7 +11,7 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- Updated CI library to `1.5.0`
+- Updated CI library to `1.6.0`
 - Moved image test to ci library
 
 ## [1.1.0] - 2026-09-22

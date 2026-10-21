@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   init:
-    uses: grootan-devops/github-ci-library/.github/workflows/init.yml@1.5.0
+    uses: grootan-devops/github-ci-library/.github/workflows/init.yml@1.6.0
     secrets: inherit
     permissions:
       contents: read
@@ -25,7 +25,7 @@ jobs:
       ignore-chart: "true"
 
   trivy-cache:
-    uses: grootan-devops/github-ci-library/.github/workflows/trivy-cache.yml@1.5.0
+    uses: grootan-devops/github-ci-library/.github/workflows/trivy-cache.yml@1.6.0
     secrets: inherit
     permissions:
       contents: read
@@ -35,7 +35,7 @@ jobs:
 
   image:
     needs: init
-    uses: grootan-devops/github-ci-library/.github/workflows/buildah.yml@1.5.0
+    uses: grootan-devops/github-ci-library/.github/workflows/buildah.yml@1.6.0
     secrets: inherit
     permissions:
       contents: read
@@ -57,7 +57,7 @@ jobs:
 
   image-scan:
     needs: [image, trivy-cache]
-    uses: grootan-devops/github-ci-library/.github/workflows/scan.yml@1.5.0
+    uses: grootan-devops/github-ci-library/.github/workflows/scan.yml@1.6.0
     secrets: inherit
     permissions:
       contents: read
