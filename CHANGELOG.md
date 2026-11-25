@@ -7,6 +7,12 @@ and this project follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.2] - 2026-11-25
+
+### Security
+
+- Rebuilt on `registry.access.redhat.com/ubi9/ubi-micro:9.9` (RHEL 9.9) to pick up fixed `glibc` and `libgcc` packages, clearing the fixable CVEs tracked in ZA-881. `1.2.1` carried this same changelog entry but was promoted from a candidate still built on the 9.8 base (`pr.yml` was not updated before merge); this release corrects that.
+
 ## [1.2.1] - 2026-11-25
 
 ### Security
